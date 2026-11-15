@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2c">
+  <title>BijliMeter — Electricity Bill Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="BijliMeter home"><span class="brand-mark">ϟ</span><span>Bijli<span class="brand-light">Meter</span></span></a>
+    <span class="top-note"><span class="live-dot"></span> Smart bill estimator</span>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> POWER YOUR PLANS</div>
+        <h1>Bijli ka bill,<br><span>ab pehle se pata.</span></h1>
+        <p>Apni monthly units enter karo aur seconds mein estimated electricity bill dekho. Simple, fast, no surprises.</p>
+        <div class="hero-points"><span><i>✓</i> Instant estimate</span><span><i>✓</i> No sign-up needed</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sun-glow"></div><div class="bolt">ϟ</div>
+        <div class="art-caption"><span class="caption-icon">↗</span><span><b>Energy, simplified</b><small>Know what’s coming</small></span></div>
+        <span class="spark spark-a">✳</span><span class="spark spark-b">✦</span>
+      </div>
+    </section>
+
+    <section class="calculator" aria-labelledby="calc-title">
+      <div class="calc-heading">
+        <div><div class="section-label">YOUR MONTHLY ESTIMATE</div><h2 id="calc-title">Chalo, calculate karte hain.</h2><p>Apni electricity usage ki details bharo.</p></div>
+        <div class="step-badge"><span>01</span> / 01</div>
+      </div>
+      <form id="bill-form">
+        <div class="field-grid">
+          <label class="field" for="units"><span class="field-title">Monthly units consumed</span><span class="field-hint">Bill par diye units (kWh) yahan daalo</span>
+            <span class="input-wrap"><input id="units" name="units" type="number" min="0" max="100000" step="1" placeholder="e.g. 250" inputmode="decimal" required><span class="input-suffix">kWh</span></span>
+          </label>
+          <label class="field" for="state"><span class="field-title">State / region</span><span class="field-hint">Estimate ke liye apna region chuno</span>
+            <span class="select-wrap"><select id="state" name="state"><option value="national">India average</option><option value="delhi">Delhi</option><option value="maharashtra">Maharashtra</option><option value="karnataka">Karnataka</option><option value="uttar-pradesh">Uttar Pradesh</option><option value="rajasthan">Rajasthan</option><option value="tamil-nadu">Tamil Nadu</option></select><span class="select-arrow">⌄</span></span>
+          </label>
+        </div>
+        <div class="form-bottom"><p class="info-note"><span>ⓘ</span> Ye ek approximate estimate hai. Actual bill local tariff aur fixed charges par depend karega.</p><button class="calculate-btn" type="submit">Estimate my bill <span>→</span></button></div>
+      </form>
+      <div class="result" id="result" aria-live="polite" hidden>
+        <div class="result-top"><div><div class="section-label">YOUR ESTIMATED MONTHLY BILL</div><div class="amount"><span>₹</span><strong id="amount">0</strong><small>approx.</small></div></div><div class="result-icon">ϟ</div></div>
+        <div class="result-details"><div><span>Units used</span><b id="result-units">—</b></div><div><span>Energy charges</span><b id="energy-charge">—</b></div><div><span>Fixed charge + tax</span><b id="extra-charge">—</b></div></div>
+        <p class="result-footnote">Estimate indicative hai. Exact amount aapke DISCOM tariff, subsidy aur meter charges se vary kar sakta hai.</p>
+      </div>
+    </section>
+    <section class="how"><div><span class="mini-icon">01</span><b>Units enter karo</b><small>Apne latest meter reading se monthly usage lo.</small></div><span class="how-line"></span><div><span class="mini-icon">02</span><b>Region select karo</b><small>State ke hisaab se approximate rates apply honge.</small></div><span class="how-line"></span><div><span class="mini-icon">03</span><b>Estimate dekho</b><small>Bill breakdown ke saath apna kharcha samjho.</small></div></section>
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">ϟ</span><span>Bijli<span class="brand-light">Meter</span></span></a><span>Made for smarter energy planning <b>✦</b></span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
